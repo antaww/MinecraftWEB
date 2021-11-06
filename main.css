@@ -1,0 +1,211 @@
+*{
+    color:rgb(255, 242, 242);
+    justify-content: center;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Minecrafter.Alt';
+    src: url('font/Minecrafter.Alt.ttf') format('truetype');
+}
+
+body{
+    height: calc(100vh - 8em);
+    padding: 4em;
+    font-family: 'Minecrafter.Alt', 'Impact';
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.css{
+    display:flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-size: x-large;
+    text-shadow: 
+    .1vw 0vw .25vw #181817,
+    .15vw 0vw .25vw #272726,
+    .1vw 0vw .1vw #272726;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+    align-items: center;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 45px; 
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 0.4);
+    background: #262c37;
+    letter-spacing: 2px;
+    font-size:30px;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+a:hover {
+    color:rgb(255, 242, 242);
+}
+
+a span {
+    display:block;
+    position: absolute;
+    background: #f8a01c;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.line {
+    position: relative;
+    top: 50%;
+    width: 16em;
+    margin: 0 auto;
+    font-size: 120%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
+}
+
+.index_title {
+    /*animation: name duration steps beginAfter apparition */
+    animation: typewriter 3s steps(40) 1s 1 normal both;
+    width: 24em;
+    font-size: 200%;
+    margin-top: 2%;
+}
+
+.fin_fail {
+    /*animation: name duration steps beginAfter apparition */
+    color: rgb(200, 28, 28);
+    animation: typewriter 3s steps(40) 1s 1 normal both;
+    width: 24em;
+    font-size: 300%;
+}
+
+.fin_win {
+    /*animation: name duration steps beginAfter apparition */
+    color: rgb(73, 218, 104);
+    animation: typewriter 3s steps(40) 1s 1 normal both;
+    width: 24em;
+    font-size: 300%;
+}
+
+.fail_button {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 5s forwards;
+}
+
+
+.index_sbtitles {
+    padding-bottom: 2%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 4s forwards;
+}
+
+.index_buttons {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 6s forwards;
+}
+
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
